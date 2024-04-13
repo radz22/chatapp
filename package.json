@@ -7,10 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node backend/server.js",
     "server": "nodemon backend/server.js",
-    "build": "npm-run-all install-deps build:frontend build:backend",
-    "install-deps": "npm install --legacy-peer-deps && npm install --legacy-peer-deps --prefix frontend",
-    "build:frontend": "cd frontend && vite build",
-    "build:backend": "cd backend && npm run build"
+    "build": "npm install --legacy-peer-deps && npm install --legacy-peer-deps --prefix frontend && vite build --prefix frontend"
   },
   "keywords": [],
   "author": "",
